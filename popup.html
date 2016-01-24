@@ -1,0 +1,77 @@
+<!doctype html>
+<html ng-app="BuyMe" ng-csp>
+	<head>
+	  <meta charset="utf-8">
+		<meta name="description" content="Swamphacks Chrome Extension!">
+		<meta name="author" content="Austin Brown, Sean Parker, and Shandy Sulen">
+
+		<title>BuyMe</title>
+
+		<!-- Scripts -->
+		<script src="js/jquery-2.0.3.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/angular.min.js"></script>
+		<script type="text/javascript" src="access.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+
+		<script src='bower_components/angular-upload/angular-upload.min.js'></script>
+
+
+
+		<!-- Cascading Style Sheets -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="css/custom.css" rel="stylesheet" media="screen">
+	</head>
+
+	<body>
+
+		<!--<div class="container-fluid" ng-controller="imageController">
+			<span class="btn btn-default btn-file">
+			    Browse <input type="file" id="file" name="file" />
+			</span>
+
+			<button class="btn btn-default" ng-click="add()">Go!</button>-->
+
+		<div class="container-fluid" ng-controller='imageController'>
+			<h2 style="text-align: center; margin-bottom:70px">BuyIn {{ booty }}</h2>
+			<div class="row">
+				<div class="col-md-4" style="display:inline-block; width:33%;"></div>
+				<div class="col-md-4" style="display:inline-block; width:33%;">
+					<div class="panel panel-default">
+  				<div class="panel-heading">
+    			<h3 class="panel-title" style="text-align:center">Upload a photo!</h3>
+  				</div>
+
+  				<div class="panel-body">
+						<div style="text-align:center">
+						<span class="btn btn-default btn-file">
+							 <input type="file" id="file" name="file" />
+						</span>
+						<button class="btn btn-default" ng-click="add()">Go!</button>
+						</div>
+  				</div>
+					</div>
+
+
+			</div>
+			<div class="col-md-4" style="display:inline-block; width:33%;">.</div>
+</div>
+<div style="text-align:center; margin-top:50px">
+<div class="row" style="display:inline-block;">
+<ul class="nav nav-pills">
+<li role="presentation" class="results"><a href="#">Purse</a></li>
+<li role="presentation" class="results"><a href="#">Bag</a></li>
+<li role="presentation" class="results"><a href="#">Brown</a></li>
+</ul>
+</div>
+</div>
+		</div>
+
+
+		
+
+
+
+
+	</body>
+</html>
