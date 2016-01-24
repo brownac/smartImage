@@ -3,6 +3,9 @@ var app = angular.module('BuyMe', [
 ]);
 
 app.controller('imageController', ['$scope', 'upload', function($scope, upload){
+
+  $scope.items = [];
+
 	$scope.doUpload = function () {
 	console.log(myFile);
     upload({
@@ -30,8 +33,8 @@ app.controller('imageController', ['$scope', 'upload', function($scope, upload){
 		$.when(getCredentials())
         	.then(postImage(imgurl))
 
-        
-    
+
+
 }
 
 $scope.add = function(){
@@ -42,14 +45,14 @@ $scope.add = function(){
     var data = e.target.result;
     var url = data.split(',')[1];
     $scope.getImage(url);
+    console.log(url);
     //send you binary data via $http or $resource or do anything else with it
   }
   //r.readAsBinaryString(f);
   r.readAsDataURL(f);
   //console.log(url);
 
-	$scope.booty = 'booty';
-	$scope.yomama =45;
+
 
 }
 

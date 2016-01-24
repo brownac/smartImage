@@ -16,13 +16,13 @@ function getCredentials(){
         localStorage.setItem('accessToken', r.access_token);
       });
 
-      //console.log(localStorage.getItem('accessToken')); 
+      //console.log(localStorage.getItem('accessToken'));
   }
 
 //POST request
 
 function postImage(imgurl) {
-    
+
     var accessToken = localStorage.getItem('accessToken');
     var data = {'encoded_image': imgurl};
     return $.ajax({
@@ -37,10 +37,12 @@ function postImage(imgurl) {
         localStorage.setItem('tagResp', r);
         parseResponse(r);
 
+
     }).error(function(err){
       console.log(err);
     });
   }
+
 
   //parse the response
 
@@ -55,7 +57,17 @@ function postImage(imgurl) {
     }
 
     console.log(tags);
+
+    //var tag = $('#print').text(tags.toString().replace(/,/g, ', '));
+
+    var str = 'http://www.amazon.com/s/field-keywords=';
+    for(var i = 0; i<tags.length; i++){
+      str = str.concat(tags[i]).concat('%20');
+    }
+    console.log(str);
+    location.assign(str);
+
+    /*$jsonAdd = JSON.stringify(tags);
+    $jsonAdd = JSON.parse($jsonAdd);*/
+
   }
-
-  
-
