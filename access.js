@@ -61,7 +61,7 @@ function postImage(imgurl) {
     //var tag = $('#print').text(tags.toString().replace(/,/g, ', '));
 
     var str = 'http://www.amazon.com/s/field-keywords=';
-    for(var i = 0; i<tags.length; i++){
+    for(var i = 0; i<5; i++){
       str = str.concat(tags[i]).concat('%20');
     }
     console.log(str);
